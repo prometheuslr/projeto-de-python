@@ -19,7 +19,6 @@ with open(arquivo_entrada, 'r', newline='') as arquivo_csv_entrada:
             escritor_csv = csv.writer(arquivo_csv_saida)
             escritor_csv.writerows(linhas[1:])
 
-# Opcional: substitua o arquivo original pelo novo arquivo
 
 os.replace(arquivo_saida, arquivo_entrada)
 
@@ -34,8 +33,6 @@ with open('pokedex.csv', 'r') as arquivo_csv:
     leitor_csv = csv.reader(arquivo_csv)
     
     for linha in leitor_csv:
-        # Realize as operações de inserção no banco de dados para cada linha do CSV
-        # Por exemplo, supondo que seu CSV tenha duas colunas (coluna1 e coluna2):
         id = linha[0]
         nome = linha[1]
         type = linha[2]
