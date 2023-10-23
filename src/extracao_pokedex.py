@@ -51,8 +51,6 @@ with open(arquivo_entrada, 'r', newline='') as arquivo_csv_entrada:
             escritor_csv = csv.writer(arquivo_csv_saida)
             escritor_csv.writerows(linhas[1:])
 
-# Opcional: substitua o arquivo original pelo novo arquivo
-
 os.replace(arquivo_saida, arquivo_entrada)
 
 
