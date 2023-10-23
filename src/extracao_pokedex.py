@@ -54,7 +54,7 @@ with open(arquivo_entrada, 'r', newline='') as arquivo_csv_entrada:
 os.replace(arquivo_saida, arquivo_entrada)
 
 
-df = pd.read_csv('pokedex.csv')
+df = pd.read_csv('pokedex.csv',header=None)
 nome_colunas = ['id','nome','type','total','hp','attack','defense','sp_atk', 'sp_def','speed']
 df.columns = nome_colunas
-print(df.head().to_string(index = False))
+print(df.head(10))
